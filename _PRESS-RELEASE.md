@@ -18,27 +18,30 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  World Clock
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  For those who need to be in many places at once.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  This application allows the user to keep track of time in various cities around the world through the click of a button. Use the add button to add times, and delete clocks using the delete button. 
 ## Problem ##
   > Describe the problem your product solves.
-
+  Have relatives or clients living in a different time zone? Not having a world clock can present a problem for such situations. Use this app instead of trying to calculate that time in your head.
 ## Solution ##
   > Describe how your product elegantly solves the problem.
-
+  This app allows the user to pick the cities that they need to keep track of, and use them inside the app. The clock is diplayed in both analog and digital time, so there;s no confusion.
 ## Quote from You ##
   > A quote from a spokesperson in your company.
-
+  'World Clock is a phenomenal way to manage relationships with clients in different time zones!'
 ## How to Get Started ##
   > Describe how easy it is to get started.
-
+  To get started, click on the '+' button on the web page. 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+  'World clock is the solution to all my problems with time zones!'
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  Go to the app, and see for yourself how useful it is!
