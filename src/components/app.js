@@ -25,7 +25,7 @@ export default class App extends React.Component {
 		super(props);
 
 		this.state = {
-			clocks
+			data: cityData
 		}
 	}
 
@@ -33,7 +33,7 @@ export default class App extends React.Component {
 		return (
 			<div>
 				<h1>World Clock</h1>
-				<ClockBlock />
+				<ClockBlock cityData={this.state.data}/>
 			</div>
 		);
 	}

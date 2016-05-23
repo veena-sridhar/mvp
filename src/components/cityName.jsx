@@ -6,8 +6,10 @@ export default class CityName extends React.Component {
 	}
 
 	render () {
-		<div>
-			<h4>{this.props.name}</h4>
-		</div>
+		return (
+			<div>
+				<h4>{this.props.name}</h4>
+			</div>
+		);
 	}
 }
