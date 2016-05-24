@@ -14,20 +14,17 @@ export default class DigitalClock extends React.Component {
 		var context = this;
 	    setInterval(function () {
 	    	context.tick();
-	    }, 10000);
-
-    	//this.setInterval(this.tick, 1000); 
+	    }, 1000);
   	}
 
 	tick () {
-		console.log('tick called', this.props.time);
 		moment().tz(this.props.time).format(this.props.format)
 		this.setState({time: moment().tz(this.props.time).format(this.props.format)});
 	}
 
 	render () {
 		return(
-			<div class='updatedTime'>{this.state.time}</div>
+			<div className="updatedTime">{this.state.time}</div>
 		);
 	}
 }

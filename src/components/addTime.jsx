@@ -27,9 +27,8 @@ export default class AddTime extends React.Component {
 
 	render () {
 		return (
-			<div>
-  			</div>
-    	);
+			<div></div>
+		);
 	}
 
 	buttonClicked (event) {

@@ -7,15 +7,15 @@ import ClockBlock from './clockBlock.jsx'
 const cityData = [
 	{
 		tz: 'America/Los_Angeles',
-		format: 'LLLL'
+		format: 'dddd, MMMM Do YYYY, h:mm:ss a'
 	},
 	{
 		tz: 'Asia/Shanghai',
-		format: 'LLLL',
+		format: 'dddd, MMMM Do YYYY, h:mm:ss a',
 	},
 	{
 		tz: 'America/New_York',
-		format: 'LLLL'
+		format: 'dddd, MMMM Do YYYY, h:mm:ss a'
 	}
 ];
 
