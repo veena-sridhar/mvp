@@ -1,22 +1,21 @@
 import React from 'react';
+import AddTime from './addTime.jsx'
 import moment from 'moment-timezone';
+import latest from 'moment-timezone/data/packed/latest.json'
 import ClockBlock from './clockBlock.jsx'
 
 const cityData = [
 	{
-		name: 'Los Angeles',
 		tz: 'America/Los_Angeles',
-		format: 'LLL'
+		format: 'LLLL'
 	},
 	{
-		name: 'Shanghai',
 		tz: 'Asia/Shanghai',
-		format: 'LLL',
+		format: 'LLLL',
 	},
 	{
-		name: 'New York',
 		tz: 'America/New_York',
-		format: 'LLL'
+		format: 'LLLL'
 	}
 ];
 
@@ -31,10 +30,21 @@ export default class App extends React.Component {
 
 	render () {
 		return (
-			<div>
+			<div onTimeZoneSelect={this.addTimeZone}>
 				<h1>World Clock</h1>
+				<AddTime />
 				<ClockBlock cityData={this.state.data}/>
 			</div>
 		);
 	}
+
 };
+
+
+
+
+
+
+
+
+
