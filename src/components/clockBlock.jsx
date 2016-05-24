@@ -3,6 +3,7 @@ import _ from 'underscore';
 import CityName from './cityName.jsx';
 import AnalogClock from './analogClock.jsx';
 import DigitalClock from './digitalClock.jsx';
+import latest from 'moment-timezone/data/packed/latest.json'
 
 export default class clockBlock extends React.Component {
 	constructor (props) {
@@ -24,7 +25,6 @@ export default class clockBlock extends React.Component {
 		select.innerHTML = options.map(function (option) {
 			return '<option>' + option + '</option>';
 		}).join('');
-		console.log('props are:', this.props);
 	}
 
 	addTimeZone (event) {

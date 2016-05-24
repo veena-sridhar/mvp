@@ -1,5 +1,4 @@
 import React from 'react';
-import AddTime from './addTime.jsx'
 import moment from 'moment-timezone';
 import latest from 'moment-timezone/data/packed/latest.json'
 import ClockBlock from './clockBlock.jsx'

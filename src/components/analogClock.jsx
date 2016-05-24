@@ -6,7 +6,10 @@ export default class AnalogClock extends React.Component {
 		super(props);
 
 		this.state = {
-			displayedTime: moment().tz(this.props.time).format()
+			displayedTime: moment().tz(this.props.time).format(),
+			styles: {
+
+			}
 		}
 	}
 
@@ -21,23 +24,26 @@ export default class AnalogClock extends React.Component {
 		var now = moment.tz(this.props.time);  
         var second = now.seconds() * 6;  
         var minute = now.minutes() * 6 + second / 60;  
-        var hour = ((now.hours() % 12) / 12) * 360 + 90 + (minute / 12); 
+        var setHours = (now.hours() > 12 ? now.hours() - 12 : now.hours()) 
+        var hour = ((setHours % 12) / 12) * 360 + 180 + (minute / 12); 
  
-        $('.hourhand').css("transform", "rotate(" + hour + "deg)");  
-        $('.minutehand').css("transform", "rotate(" + minute + "deg)");  
-        $('.secondhand').css("transform", "rotate(" + second + "deg)"); 
+        this.setState({styles: 
+        	{
+	        	hourHandStyle : {transform: "rotate(" + hour + "deg)"},  
+	        	minuteHandStyle : {transform: "rotate(" + minute + "deg)"},  
+	        	secondHandStyle: {transform: "rotate(" + second + "deg)"} 
+        	}
+        }); 
 	  
 	}
-
-
 
 	render () {
 		return (
 			<div className="clockarea">
 				<div className="clock">
-					<div className="hourhand"></div>
-					<div className="minutehand"></div>
-					<div className="secondhand"></div>
+					<div className="hourhand" style={this.state.styles.hourHandStyle}></div>
+					<div className="minutehand" style={this.state.styles.minuteHandStyle}></div>
+					<div className="secondhand" style={this.state.styles.secondHandStyle}></div>
 				</div>
 			</div>
 		);
