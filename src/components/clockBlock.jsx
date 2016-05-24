@@ -9,7 +9,8 @@ export default class clockBlock extends React.Component {
 		super(props);
 
 		this.state = {
-			cityData: this.props.cityData
+			cityData: this.props.cityData,
+			isShowing: true
 		};
 	}
 
@@ -20,10 +21,24 @@ export default class clockBlock extends React.Component {
 			format: 'dddd, MMMM Do YYYY, h:mm:ss a'
 		}]);
 		this.setState({
-			cityData: newCityData
+			cityData: newCityData,
+			isShowing: true
 		});
 	}
 
+	deleteTimeZone (event) {
+		var clicked = event.target.innerText;
+		
+		console.log('getting into the if statement');
+		for (var i = 0; i < this.state.cityData.length; i++) {
+			debugger;
+			if (this.state.cityData[i].tz === clicked) {
+				this.state.cityData.splice(i, 1);
+			}
+		}
+		
+		this.setState({isShowing: !this.state.isShowing});
+	}
 
 	render () {
 		return (
@@ -34,10 +49,10 @@ export default class clockBlock extends React.Component {
 				</div>
 				<div className='clockBlock'>
 					<div className='timeBlock'>
-						{this.state.cityData.map((cityObj) => {
+						{this.state.cityData.map((cityObj, index) => {
 							return (
 								<div className='container col-md-4'>
-									<div className="cityName"><CityName name={cityObj.tz} /></div>
+									<div className="cityName" onClick={this.deleteTimeZone.bind(this)}><CityName name={cityObj.tz} /></div>
 									<AnalogClock time={cityObj.tz}/>
 									<div className="digClock"><DigitalClock time={cityObj.tz} format={cityObj.format} /></div>
 								</div>
@@ -49,6 +64,7 @@ export default class clockBlock extends React.Component {
 		);
 	
 	}
+
 }
 
 

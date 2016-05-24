@@ -18,7 +18,7 @@ export default class AnalogClock extends React.Component {
 	}
 
 	tick () {
-		var now = moment();  
+		var now = moment.tz(this.props.time);  
         var second = now.seconds() * 6;  
         var minute = now.minutes() * 6 + second / 60;  
         var hour = ((now.hours() % 12) / 12) * 360 + 90 + minute / 12; 

@@ -5,18 +5,18 @@ import latest from 'moment-timezone/data/packed/latest.json'
 import ClockBlock from './clockBlock.jsx'
 
 const cityData = [
-	{
-		tz: 'America/Los_Angeles',
-		format: 'dddd, MMMM Do YYYY, h:mm:ss a'
-	},
-	{
-		tz: 'Asia/Shanghai',
-		format: 'dddd, MMMM Do YYYY, h:mm:ss a',
-	},
-	{
-		tz: 'America/New_York',
-		format: 'dddd, MMMM Do YYYY, h:mm:ss a'
-	}
+	// {
+	// 	tz: 'America/Los_Angeles',
+	// 	format: 'dddd, MMMM Do YYYY, h:mm:ss a'
+	// },
+	// {
+	// 	tz: 'Asia/Shanghai',
+	// 	format: 'dddd, MMMM Do YYYY, h:mm:ss a',
+	// },
+	// {
+	// 	tz: 'America/New_York',
+	// 	format: 'dddd, MMMM Do YYYY, h:mm:ss a'
+	// }
 ];
 
 export default class App extends React.Component {

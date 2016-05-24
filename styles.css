@@ -18,6 +18,7 @@ h4 {
     font-family: 'Playfair Display', serif;
     color: #4717F6;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 .updatedTime {
@@ -45,8 +46,8 @@ h4 {
 
 select {
    font-family: 'Playfair Display', serif;
-   height: 2em;
-   width: 8em; 
+   height: 4em;
+   width: 12em; 
 }
 
 .timeBlock > div {
