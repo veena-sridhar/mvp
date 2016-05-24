@@ -32,7 +32,6 @@ export default class App extends React.Component {
 		return (
 			<div onTimeZoneSelect={this.addTimeZone}>
 				<h1>World Clock</h1>
-				<AddTime />
 				<ClockBlock cityData={this.state.data}/>
 			</div>
 		);

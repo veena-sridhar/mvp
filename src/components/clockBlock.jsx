@@ -14,6 +14,19 @@ export default class clockBlock extends React.Component {
 		};
 	}
 
+	componentDidMount () {
+		var options = latest.zones.map((aZone) => {
+			var parts = aZone.split('|');
+			var zoneName = parts[0];
+			return zoneName;
+		});
+		var select = document.getElementById('placeSelector');
+		select.innerHTML = options.map(function (option) {
+			return '<option>' + option + '</option>';
+		}).join('');
+		console.log('props are:', this.props);
+	}
+
 	addTimeZone (event) {
 		event.preventDefault();
 		var newCityData = this.state.cityData.concat([{
@@ -28,15 +41,15 @@ export default class clockBlock extends React.Component {
 
 	deleteTimeZone (event) {
 		var clicked = event.target.innerText;
-		
-		console.log('getting into the if statement');
 		for (var i = 0; i < this.state.cityData.length; i++) {
-			debugger;
 			if (this.state.cityData[i].tz === clicked) {
 				this.state.cityData.splice(i, 1);
 			}
 		}
-		
+	}
+
+	handleClick (event) {
+		this.deleteTimeZone(event);
 		this.setState({isShowing: !this.state.isShowing});
 	}
 
@@ -51,9 +64,9 @@ export default class clockBlock extends React.Component {
 					<div className='timeBlock'>
 						{this.state.cityData.map((cityObj, index) => {
 							return (
-								<div className='container col-md-4'>
-									<div className="cityName" onClick={this.deleteTimeZone.bind(this)}><CityName name={cityObj.tz} /></div>
-									<AnalogClock time={cityObj.tz}/>
+								<div key={index} className='container col-md-4'>
+									<div className="cityName" onClick={this.handleClick.bind(this)}><CityName name={cityObj.tz} /></div>
+									<AnalogClock key={index} time={cityObj.tz}/>
 									<div className="digClock"><DigitalClock time={cityObj.tz} format={cityObj.format} /></div>
 								</div>
 							);

@@ -21,7 +21,7 @@ export default class AnalogClock extends React.Component {
 		var now = moment.tz(this.props.time);  
         var second = now.seconds() * 6;  
         var minute = now.minutes() * 6 + second / 60;  
-        var hour = ((now.hours() % 12) / 12) * 360 + 90 + minute / 12; 
+        var hour = ((now.hours() % 12) / 12) * 360 + 90 + (minute / 12); 
  
         $('.hourhand').css("transform", "rotate(" + hour + "deg)");  
         $('.minutehand').css("transform", "rotate(" + minute + "deg)");  
@@ -29,13 +29,15 @@ export default class AnalogClock extends React.Component {
 	  
 	}
 
+
+
 	render () {
 		return (
 			<div className="clockarea">
 				<div className="clock">
-					<div className="hourhand" id="hour"></div>
-					<div className="minutehand" id="minute"></div>
-					<div className="secondhand" id="second"></div>
+					<div className="hourhand"></div>
+					<div className="minutehand"></div>
+					<div className="secondhand"></div>
 				</div>
 			</div>
 		);

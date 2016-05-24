@@ -14,6 +14,13 @@ h1 {
     text-align: center;
 }
 
+.addTimeZone {
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
 h4 {
     font-family: 'Playfair Display', serif;
     color: #4717F6;
@@ -23,7 +30,7 @@ h4 {
 
 .updatedTime {
     color: white;
-    font-size: 1em;
+    font-size: 1.25em;
     margin-top: 0.75em;
     padding-bottom: 1.5em;
 }
@@ -46,8 +53,15 @@ h4 {
 
 select {
    font-family: 'Playfair Display', serif;
-   height: 4em;
-   width: 12em; 
+   background: white;
+   width: 18em;
+   padding: 5px;
+   font-size: 1em;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 3em;
+   -webkit-appearance: none;
 }
 
 .timeBlock > div {
@@ -86,14 +100,14 @@ select {
     width: 0;  
     height: 0;  
     position: relative;  
-    top: 50%;  
+    top: 47%;  
     left: 50%;  
-    margin: -4px 4px -25%;  
+    margin: -4px 4px 0;  
     padding: 5px 5px 25% ;  
     background: #4717F6; 
     -webkit-transform-origin: 100% 50%; 
     -ms-transform-origin: 100% 50%;  
-    transform-origin: 100% 50%;  
+    transform-origin: top;  
     border-radius: 4px;  
 }  
   
@@ -103,8 +117,8 @@ select {
     position: relative;  
     top: 50%;  
     left: 50%;  
-    margin: -40% -3px 0;  
-    padding: 40 % 3px 0;  
+    margin: -70% 2px 0;  
+    padding: 40% 3px 0;  
     background: #4717F6; 
     -webkit-transform-origin: 50% 100%; 
     -ms-transform-origin: 50% 100%;  
@@ -118,7 +132,7 @@ select {
     position: relative;  
     top: 50%;  
     left: 50%;  
-    margin: -40% -1px 00;  
+    margin: -40% 5px 00;  
     padding: 40% 1px 0;  
     background: #A239CA; 
     -webkit-transform-origin: 50% 100%; 
